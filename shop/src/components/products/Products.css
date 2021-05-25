@@ -1,0 +1,132 @@
+.header-p {
+  border: 10px solid rgb(224, 223, 223);
+  margin: 25px -10px 15px -10px;
+  padding-left: 50px;
+  background-color: rgb(224, 223, 223);
+  color: rgb(36, 33, 33);
+}
+.renderedItems {
+  margin: 25px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 250px;
+  border-radius: 10px;
+}
+.renderedItems:hover {
+  border: 1px solid rgb(175, 167, 167);
+  border-radius: 10px;
+}
+.renderedItems img {
+  width: 100%;
+  height: 150px;
+}
+.description {
+  padding: 15px;
+  text-align: center;
+}
+.renderedItems button {
+  border-radius: 20px;
+  transition-duration: 0.4s;
+  padding: 12px 28px;
+  border: 2px solid #4caf50;
+  color: green;
+  background-color: white;
+  font-size: 10px;
+}
+.renderedItems button:hover {
+  border-radius: 20px;
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 28px;
+  border: 2px solid #4caf50;
+  font-size: 10px;
+}
+#off {
+  float: left;
+  padding: 15px;
+  width: 25%;
+  height: 20px;
+  color: red;
+}
+#rating {
+  float: right;
+  padding: 15px;
+  width: 25%;
+  height: 20px;
+  color: red;
+}
+#actual_price {
+  color: rgb(194, 181, 181);
+  text-decoration: line-through;
+}
+#des_price {
+  color: rgb(19, 17, 17);
+}
+.top-h-p {
+  margin-top: 50px;
+}
+.top-h-p label {
+  margin-left: 50px;
+  float: left;
+  color: rgb(194, 181, 181);
+}
+.top-h-p select {
+  float: left;
+  border-radius: 20px;
+  border: 1px solid rgb(194, 181, 181);
+  padding: 10px;
+  margin-top: -10px;
+  margin-left: 5px;
+  color: rgb(73, 68, 68);
+}
+.top-h-p div {
+  float: left;
+  margin-left: 10px;
+  color: rgb(194, 181, 181);
+}
+.grid-view {
+  float: left;
+  margin-left: 750px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  color: rgb(80, 79, 79);
+  font-size: 20px;
+  padding: 10px 24px;
+  background-color: white;
+  padding: 13px 12px 8px 12px;
+  margin-top: -15px;
+}
+.list-view {
+  float: left;
+  margin-left: 15px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  color: rgb(80, 79, 79);
+  font-size: 20px;
+  padding: 10px 24px;
+  background-color: white;
+  padding: 13px 12px 8px 12px;
+  margin-top: -15px;
+}
+.grid-view:hover {
+  float: left;
+  margin-left: 750px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  color: white;
+  font-size: 20px;
+  padding: 10px 24px;
+  background-color: #4caf50;
+  padding: 13px 12px 8px 12px;
+}
+.list-view:hover {
+  float: left;
+  margin-left: 15px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  color: white;
+  font-size: 20px;
+  padding: 10px 24px;
+  background-color: #4caf50;
+  padding: 13px 12px 8px 12px;
+}
