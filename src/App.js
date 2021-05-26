@@ -1,19 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
 import Header from './component/Header'
-import Cad from './component/Cad'
-import Card from './component/Card'
-
-
+import Main from './component/Main'
+// import Footer from '.component/Footer'
+// import Cad from './component/Cad'
+// import Card from './component/Card'
+ 
 function App() {
   return (
     <div className="App">
-
+     
+    
      
      <Header></Header> 
-      {/* <Cad></Cad> */}
-      <Card></Card> 
+    <Main></Main>
+  {/* <Footer></Footer> */}
+
+     
+
+
+
       
+     
+      
+       
       
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />

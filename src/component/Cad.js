@@ -37,4 +37,4 @@ function Cad() {
     )
 }
 
-export default Cad
+export default Cad;
