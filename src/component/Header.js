@@ -8,8 +8,8 @@ function Header() {
                 <div className="logo" >
                     <i className="fa fa-bars"/>
                 </div>
-                <ul className="order">
-                    <div className="aa">
+                <ul className="navlink">
+                    <div className="link">
                     <li>Home</li>
                     <li>Product</li>
                     <li>Cart</li>
