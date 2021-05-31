@@ -1,23 +1,23 @@
 .slider {
   position: relative;
-  height: 100vh;
+  height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.image {
-  width: 1000px;
-  height: 500px;
+.image-slider {
+  width: 500px;
+  height: 350px;
   border-radius: 10px;
 }
 
 .right-arrow {
   position: absolute;
   top: 50%;
-  right: -20px;
+  right: 10px;
   font-size: 3rem;
-  color: white;
+  color: rgb(46, 41, 41);
   opacity: 0.5;
   z-index: 10;
   cursor: pointer;
@@ -27,9 +27,9 @@
 .left-arrow {
   position: absolute;
   top: 50%;
-  left: -20px;
+  left: 10px;
   font-size: 3rem;
-  color: white;
+  color: rgb(46, 41, 41);
   opacity: 0.5;
   z-index: 10;
   cursor: pointer;
@@ -41,7 +41,7 @@
   transition-duration: 1s ease;
 }
 
-.slide.active {
+.slide.act {
   opacity: 1;
   transition-duration: 1s;
   transform: scale(1.08);
