@@ -1,45 +1,47 @@
 import logo from './logo.svg';
 import './App.css';
-import Header from './component/Header'
+
 import Main from './component/Main'
-// import Footer from '.component/Footer'
-// import Cad from './component/Cad'
-// import Card from './component/Card'
- 
-function App() {
+
+import Nav from './component/Nav'
+
+import Cart from './component/Cart'
+import Home from './component/Home'
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
+
+
+
+const App = () => {
+  
   return (
-    <div className="App">
+    
+   <Router>
+    <div className="App">   
+<Nav></Nav>
+<Route path ="/Main" component={Main} />
+<Route path ="/Cart" component={Cart} />
+<Route path ="/Home" component={Home} />
+     
+      
+    {/* <Main></Main>
+    <Home></Home> */}
+    {/* <Cart></Cart> */}
+   
+   
+   
      
     
-     
-     <Header></Header> 
-    <Main></Main>
-  {/* <Footer></Footer> */}
 
-     
-
-
+ 
 
       
      
       
        
       
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
+   
     </div>
+    </Router>
   );
 }
 
