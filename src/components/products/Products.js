@@ -37,7 +37,7 @@ const Products = ({ cartItem, setCartItem }) => {
           setCartItem(cartItemT1);
         }
       }
-      if (tem == 0) {
+      if (tem === 0) {
         let cartItemT2 = [...cartItem];
         cartItemT2.push({ id: id, quantity: 1 });
         setCartItem(cartItemT2);

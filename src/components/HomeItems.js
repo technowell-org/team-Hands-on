@@ -8,16 +8,16 @@ const HomeItems = ({ item }) => {
 
   const renderedListItems = item.map((id) => {
     return (
-      <div>
+      <div key={id}>
         {ItemsData.map((val) => {
           if (id === val.id) {
             return (
-              <div className="homeItems">
+              <div className="homeItems" key={val.id}>
                 <div
                   className="image-homeItems"
                   onClick={() => history.push(`/products/${val.id}`)}
                 >
-                  <img src={val.pic}></img>
+                  <img src={val.pic} alt="product"></img>
                 </div>
                 <div className="content-homeItems">
                   <div
@@ -31,6 +31,8 @@ const HomeItems = ({ item }) => {
                 </div>
               </div>
             );
+          } else {
+            return null;
           }
         })}
       </div>

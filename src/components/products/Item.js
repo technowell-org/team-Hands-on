@@ -28,7 +28,7 @@ export const Item = ({ cartItem, setCartItem }) => {
           setCartItem(cartItemT1);
         }
       }
-      if (tem == 0) {
+      if (tem === 0) {
         let cartItemT2 = [...cartItem];
         cartItemT2.push({ id: id, quantity: quant });
         setCartItem(cartItemT2);
@@ -72,6 +72,8 @@ export const Item = ({ cartItem, setCartItem }) => {
           </div>
         </div>
       );
+    } else {
+      return null;
     }
   });
 

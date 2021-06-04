@@ -1,7 +1,7 @@
-import react, { useState } from "react";
+import { useState } from "react";
 import Home from "./components/Home";
 import Products from "./components/products/Products";
-import { BrowserRouter, Route, Switch, render } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Header from "./components/Header";
 import { Item } from "./components/products/Item";
 import Cart from "./components/cart/Cart";

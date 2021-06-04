@@ -1,14 +1,14 @@
 import "./Heading.css";
 import React from "react";
 import { Link } from "react-router-dom";
-import { IconName, BsCaretRightFill } from "react-icons/bs";
+import { BsCaretRightFill } from "react-icons/bs";
 
 const Heading = ({ titles, current }) => {
   const renderTitles = titles.map((title) => {
     return (
-      <ul className="title-ul">
+      <ul className="title-ul" key={title.name}>
         <li className="title-list">
-          <Link to={title.path} exact className="links">
+          <Link to={title.path} className="links">
             <BsCaretRightFill></BsCaretRightFill>
             {title.name}
           </Link>

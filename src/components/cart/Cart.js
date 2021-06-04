@@ -43,9 +43,13 @@ const Cart = ({ cartItem, setCartItem }) => {
       const eachCartItem = ItemsData.map((val) => {
         if (value.id === val.id) {
           return (
-            <div className="eachCartItem">
+            <div className="eachCartItem" key={val.id}>
               <div className="image-cart">
-                <img src={val.pic} onClick={() => onItemClick(val.id)}></img>
+                <img
+                  src={val.pic}
+                  alt="product"
+                  onClick={() => onItemClick(val.id)}
+                ></img>
               </div>
               <div className="title-cart" onClick={() => onItemClick(val.id)}>
                 {val.title}
@@ -79,10 +83,12 @@ const Cart = ({ cartItem, setCartItem }) => {
               </div>
             </div>
           );
+        } else {
+          return null;
         }
       });
       return (
-        <div className="renderItemsInCart">
+        <div className="renderItemsInCart" key={value.id}>
           {eachCartItem}
 
           <hr></hr>
