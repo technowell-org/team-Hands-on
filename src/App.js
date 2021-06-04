@@ -8,6 +8,7 @@ import Nav from './component/Nav'
 import Cart from './component/Cart'
 import Home from './component/Home'
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
+import Footer from './component/Footer'
 
 
 
@@ -16,17 +17,15 @@ const App = () => {
   return (
     
    <Router>
-    <div className="App">   
+    <div className="App">  
+   
 <Nav></Nav>
 <Route path ="/Main" component={Main} />
 <Route path ="/Cart" component={Cart} />
 <Route path ="/Home" component={Home} />
-     
-      
-    {/* <Main></Main>
-    <Home></Home> */}
-    {/* <Cart></Cart> */}
    
+<Footer/>
+    
    
    
      

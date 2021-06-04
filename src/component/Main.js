@@ -4,6 +4,7 @@ import { ProductsData } from "./ProductsData";
 import { FaGripHorizontal, FaListUl } from "react-icons/fa";
 
 
+
 const Main = () => {
     var des_price = [];
     ProductsData.map((item, index) => {
@@ -15,6 +16,7 @@ const Main = () => {
     });
     const [activeView, setActiveView] = useState("");
     const [sortby, setSortby] = useState([0, 1, 2, 3, 4, 5, 6, 7]);
+
   
     const onGViewClick = () => {
       setActiveView("");
@@ -77,6 +79,8 @@ const Main = () => {
             </div>
             <button type="button">ADD TO CART</button>
           </div>
+
+
         </div>
       );
     });
@@ -90,9 +94,7 @@ const Main = () => {
 
 return (
     <div className="products">
-      {/* <div className="header-p">
-        <h1>Products</h1>
-      </div> */}
+      
       <div className="top-h-p">
         <label for="sort">Sort by:</label>
 

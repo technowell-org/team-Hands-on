@@ -15,7 +15,7 @@ const Home = () => {
           <div className="row">
               <div className="col-md-4">
               <h6>NEW ARRIVALS</h6>
-             
+              
              
              
               <hr />
@@ -45,9 +45,7 @@ const Home = () => {
               </div>
           </div>
 
-        {/* <h4>NEW ARRIVALS</h4>
-        <h4>ON SALE</h4>
-        <h4>BEST RATED</h4> */}
+        
       </div>
 
 
