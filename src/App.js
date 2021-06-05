@@ -1,19 +1,31 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import react, { useState } from "react";
+ import {BrowserRouter,Route,Switch} from "react-router-dom"; 
+ import Products from "./components/products/Products";
+import Home from "./components/Home"
+ import Cart from "./components/cart/Cart"
 
-
- import Header from './component/Header'
-import MainContent from './component/MainContent'
-import Footer from './component/Footer'
 function App() {
+  const [cartItem, setCartItem] = useState([]);
   return (
-    <div className="">
     
-      <Header/>
-      <MainContent/>
-<Footer/>
-     
+ <BrowserRouter>
+    <div className="">
+   <Switch>
+       <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/Products/:id">
+          <Products />
+        </Route>
+        <Route path="/Cart">
+          <Cart />
+        </Route>
+        </Switch>
+        
     </div>
+  </BrowserRouter>
   );
 }
 
