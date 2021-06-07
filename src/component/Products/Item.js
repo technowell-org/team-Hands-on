@@ -1,6 +1,6 @@
 import "./Item.css";
 import React, { useState } from "react";
-import Heading from "../Heading";
+
 import { useParams } from "react-router-dom";
 import { ItemsData } from "./ItemsData";
 
@@ -45,7 +45,7 @@ export const Item = ({ cartItem, setCartItem }) => {
     if (id === item.id) {
       return (
         <div className="renderItem" key={item.id}>
-          <Heading current="Products" titles={titles}></Heading>
+         
           <div className="image">
             <div className="offer">{item.offer}</div>
             <img src={item.pic} alt="products"></img>

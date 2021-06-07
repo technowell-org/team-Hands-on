@@ -1,6 +1,6 @@
 import "./Cart.css";
 import React from "react";
-import Heading from "../Heading";
+
 import { ItemsData } from "../Products/ItemsData";
 import { MdClose } from "react-icons/md";
 import { FaMinus, FaPlus } from "react-icons/fa";
@@ -107,7 +107,7 @@ const Cart = ({ cartItem, setCartItem }) => {
   ];
   return (
     <div className="cart">
-      <Heading current="Cart" titles={titles}></Heading>
+     
       <hr></hr>
       <div className="index-cart">
         <div className="product-name-cart">Product Name</div>
