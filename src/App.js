@@ -1,47 +1,64 @@
-import logo from './logo.svg';
-import './App.css';
-
-import Main from './component/Main'
-
-import Nav from './component/Nav'
-
-import Cart from './component/Cart'
-import Home from './component/Home'
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
-import Footer from './component/Footer'
+import { useState } from "react";
+import Homee from "./component/Homee";
+import Products from "./component/Products/Main";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Header from "./component/Header";
+import { Item } from "./component/Products/Item";
+import Cart from "./component/Cart/Cart";
 
 
 
 const App = () => {
-  
+  const [cartItem, setCartItem] = useState([]);
   return (
-    
-   <Router>
-    <div className="App">  
-   
-<Nav></Nav>
-<Route path ="/Main" component={Main} />
-<Route path ="/Cart" component={Cart} />
-<Route path ="/Home" component={Home} />
-   
-<Footer/>
-    
-   
-   
+    <div className="App">
      
-    
+      <BrowserRouter>
+        <div>
+          <Header></Header>
+          <Switch>
+            <Route path="/" exact component={Homee} />
+            <Route
+              path="/products"
+              exact
+              render={(props) => (
+                <Products
+                  {...props}
+                  cartItem={cartItem}
+                  setCartItem={setCartItem}
+                />
+              )}
+            />
 
- 
-
+            <Route
+              path="/products/:id"
+              exact
+              render={(props) => (
+                <Item
+                  {...props}
+                  cartItem={cartItem}
+                  setCartItem={setCartItem}
+                />
+              )}
+            />
+            <Route
+              path="/cart"
+              exact
+              render={(props) => (
+                <Cart
+                  {...props}
+                  cartItem={cartItem}
+                  setCartItem={setCartItem}
+                />
+              )}
+            />
+          </Switch>
+        </div>
+      </BrowserRouter>
       
      
-      
-       
-      
-   
     </div>
-    </Router>
   );
-}
+};
 
 export default App;

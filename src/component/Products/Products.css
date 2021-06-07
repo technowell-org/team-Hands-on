@@ -1,11 +1,4 @@
-.header-p {
-    border: 10px solid rgb(224, 223, 223);
-    margin: 25px -10px 15px -10px;
-    padding-left: 50px;
-    background-color: rgb(224, 223, 223);
-    color: rgb(36, 33, 33);
-  }
-  .renderedItems {
+.renderedItems {
     margin: 25px;
     border: 1px solid #ccc;
     float: left;
@@ -19,6 +12,11 @@
   .renderedItems img {
     width: 100%;
     height: 150px;
+    cursor: pointer;
+  }
+  .title-prod {
+    cursor: pointer;
+    font-weight: bold;
   }
   .description {
     padding: 15px;
@@ -91,10 +89,10 @@
     margin-left: 750px;
     border: 1px solid #ccc;
     border-radius: 50%;
-    color: rgb(80, 79, 79);
+    color: white;
     font-size: 20px;
     padding: 10px 24px;
-    background-color: white;
+    background-color: #4caf50;
     padding: 13px 12px 8px 12px;
     margin-top: -15px;
   }
@@ -110,33 +108,12 @@
     padding: 13px 12px 8px 12px;
     margin-top: -15px;
   }
-  .grid-view:hover {
-    float: left;
-    margin-left: 750px;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-    color: rgb(80, 79, 79);
-    font-size: 20px;
-    padding: 10px 24px;
-    background-color: #e2e7e221;
-    padding: 13px 12px 8px 12px;
-  }
-  .list-view:hover {
-    float: left;
-    margin-left: 15px;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-    color: rgb(80, 79, 79);
-    font-size: 20px;
-    padding: 10px 24px;
-    background-color: #e2e7e221;
-    padding: 13px 12px 8px 12px;
-  }
+  
   .renderedItems-LView {
     margin: 25px;
   
     border: 1px solid #ccc;
-  
+    height: 250px;
     width: 1000px;
     border-radius: 10px;
   }
@@ -149,16 +126,18 @@
     height: 170px;
     margin-left: -250px;
     margin-top: 30px;
+    float: left;
+    cursor: pointer;
   }
   .description-LView {
     padding: 15px;
-    float: right;
+    float: left;
     font-size: 15px;
     margin-right: 250px;
   }
   .text-d-LView {
     font-size: 20px;
-    margin-top: 20px;
+    margin-top: 30px;
     color: rgb(80, 79, 79);
   }
   .renderedItems-LView button {
@@ -166,14 +145,14 @@
     transition-duration: 0.4s;
     padding: 12px 28px;
     border: 2px solid #4caf50;
-    color: rgb(60, 0, 128);
+    color: green;
     background-color: white;
     font-size: 10px;
     margin-top: 40px;
   }
   .renderedItems-LView button:hover {
     border-radius: 20px;
-    background-color: #4c6baf;
+    background-color: #4caf50;
     color: white;
     padding: 12px 28px;
     border: 2px solid #4caf50;
@@ -196,6 +175,7 @@
     margin-right: -130px;
   }
   #actual_price-LView {
+    color: rgb(194, 181, 181);
     text-decoration: line-through;
   }
   #des_price-LView {
@@ -203,4 +183,28 @@
   }
   .items-c-p {
     margin-top: 130px;
+  }
+  .grid-view-LView {
+    float: left;
+    margin-left: 750px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    color: rgb(80, 79, 79);
+    font-size: 20px;
+    padding: 10px 24px;
+    background-color: white;
+    padding: 13px 12px 8px 12px;
+    margin-top: -15px;
+  }
+  .list-view-LView {
+    float: left;
+    margin-left: 15px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    padding: 10px 24px;
+    background-color: #4caf50;
+    padding: 13px 12px 8px 12px;
+    margin-top: -15px;
   }
