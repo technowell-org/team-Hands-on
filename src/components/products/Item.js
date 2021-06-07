@@ -3,38 +3,17 @@ import React, { useState } from "react";
 import Heading from "../Heading";
 import { useParams } from "react-router-dom";
 import { ItemsData } from "./ItemsData";
+import { connect } from "react-redux";
+import { addWithQuantity } from "../../actions/index";
 
-export const Item = ({ cartItem, setCartItem }) => {
+const Item = (props) => {
   const [quant, setQuant] = useState(1);
   const { id } = useParams();
 
   const onQuantityChange = (e) => {
     setQuant(parseInt(e.target.value));
   };
-  const onAddCartClick = () => {
-    if (cartItem.length === 0) {
-      let cartItemT = [];
-      cartItemT.push({ id: id, quantity: quant });
-      setCartItem(cartItemT);
-    } else {
-      var i;
-      var tem = 0; // no item
-      for (i = 0; i < cartItem.length; i++) {
-        let val = cartItem[i];
-        if (id === val.id) {
-          tem = 1;
-          let cartItemT1 = [...cartItem];
-          cartItemT1.splice(i, 1, { id: id, quantity: val.quantity + quant });
-          setCartItem(cartItemT1);
-        }
-      }
-      if (tem === 0) {
-        let cartItemT2 = [...cartItem];
-        cartItemT2.push({ id: id, quantity: quant });
-        setCartItem(cartItemT2);
-      }
-    }
-  };
+
   const renderItem = ItemsData.map((item) => {
     let titles = [
       { name: "Home", path: "/" },
@@ -66,7 +45,10 @@ export const Item = ({ cartItem, setCartItem }) => {
               <option value="5">5</option>
             </select>
             <hr></hr>
-            <button type="button" onClick={onAddCartClick}>
+            <button
+              type="button"
+              onClick={() => props.addWithQuantity(id, quant)}
+            >
               ADD TO CART
             </button>
           </div>
@@ -79,3 +61,7 @@ export const Item = ({ cartItem, setCartItem }) => {
 
   return <div className="item">{renderItem}</div>;
 };
+const mapStateToProps = (state) => {
+  return { items: state.items };
+};
+export default connect(mapStateToProps, { addWithQuantity })(Item);

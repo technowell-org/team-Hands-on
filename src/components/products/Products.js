@@ -2,11 +2,14 @@ import "./Products.css";
 import React, { useState } from "react";
 import { ItemsData } from "./ItemsData";
 import { FaGripHorizontal, FaListUl } from "react-icons/fa";
+import { connect } from "react-redux";
+import { addToCart } from "../../actions/index";
 
 import { useHistory } from "react-router-dom";
+
 import Heading from "../Heading";
 
-const Products = ({ cartItem, setCartItem }) => {
+const Products = (props) => {
   var des_price = [];
   ItemsData.map((item, index) => {
     return des_price.push({ key: item.des_price, val: index });
@@ -20,30 +23,6 @@ const Products = ({ cartItem, setCartItem }) => {
   const [sortby, setSortby] = useState([...Array(ItemsData.length).keys()]);
   const history = useHistory();
 
-  const onAddCartClick = (id) => {
-    if (cartItem.length === 0) {
-      let cartItemT = [];
-      cartItemT.push({ id: id, quantity: 1 });
-      setCartItem(cartItemT);
-    } else {
-      var i;
-      var tem = 0; // no item
-      for (i = 0; i < cartItem.length; i++) {
-        let val = cartItem[i];
-        if (id === val.id) {
-          tem = 1;
-          let cartItemT1 = [...cartItem];
-          cartItemT1.splice(i, 1, { id: id, quantity: val.quantity + 1 });
-          setCartItem(cartItemT1);
-        }
-      }
-      if (tem === 0) {
-        let cartItemT2 = [...cartItem];
-        cartItemT2.push({ id: id, quantity: 1 });
-        setCartItem(cartItemT2);
-      }
-    }
-  };
   let titles = [
     { name: "Home", path: "/" },
     { name: "Products", path: "/products" },
@@ -112,7 +91,7 @@ const Products = ({ cartItem, setCartItem }) => {
             <div id={`actual_price${activeView}`}>{item.actual_price}</div>
             <div id={`des_price${activeView}`}> {item.des_price}</div>
           </div>
-          <button type="button" onClick={() => onAddCartClick(item.id)}>
+          <button type="button" onClick={() => props.addToCart(item.id)}>
             ADD TO CART
           </button>
         </div>
@@ -148,5 +127,8 @@ const Products = ({ cartItem, setCartItem }) => {
     </div>
   );
 };
+const mapStateToProps = (state) => {
+  return { items: state.items };
+};
 
-export default Products;
+export default connect(mapStateToProps, { addToCart })(Products);

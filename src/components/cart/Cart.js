@@ -6,8 +6,15 @@ import { MdClose } from "react-icons/md";
 import { FaMinus, FaPlus } from "react-icons/fa";
 import { BiArrowBack } from "react-icons/bi";
 import { useHistory } from "react-router-dom";
+import { connect } from "react-redux";
+import {
+  minusQuant,
+  plusQuant,
+  cancelItem,
+  clearCart,
+} from "../../actions/index";
 
-const Cart = ({ cartItem, setCartItem }) => {
+const Cart = (props) => {
   const history = useHistory();
   const onItemClick = (id) => {
     history.push(`/products/${id}`);
@@ -15,31 +22,10 @@ const Cart = ({ cartItem, setCartItem }) => {
   const onBackToShopClick = () => {
     history.push(`/products`);
   };
-  const onMinusClick = (value, index) => {
-    let cartItemT4 = [...cartItem];
 
-    if (cartItemT4[index].quantity > 1) {
-      cartItemT4[index].quantity = cartItemT4[index].quantity - 1;
-    }
-
-    setCartItem(cartItemT4);
-  };
-  const onPlusClick = (value, index) => {
-    let cartItemT5 = [...cartItem];
-    cartItemT5[index].quantity = cartItemT5[index].quantity + 1;
-    setCartItem(cartItemT5);
-  };
-  const onClearCartClick = () => {
-    setCartItem([]);
-  };
-  const onCancelClick = (index) => {
-    let cartItemT3 = [...cartItem];
-    cartItemT3.splice(index, 1);
-    setCartItem(cartItemT3);
-  };
   var renderItemsInCart;
-  if (cartItem.length !== 0) {
-    renderItemsInCart = cartItem.map((value, index) => {
+  if (props.items.length !== 0) {
+    renderItemsInCart = props.items.map((value, index) => {
       const eachCartItem = ItemsData.map((val) => {
         if (value.id === val.id) {
           return (
@@ -59,14 +45,14 @@ const Cart = ({ cartItem, setCartItem }) => {
                   <FaMinus
                     className="minus"
                     size={10}
-                    onClick={() => onMinusClick(value, index)}
+                    onClick={() => props.minusQuant(index)}
                   ></FaMinus>
                   {value.quantity}
 
                   <FaPlus
                     className="plus"
                     size={10}
-                    onClick={() => onPlusClick(value, index)}
+                    onClick={() => props.plusQuant(index)}
                   ></FaPlus>
                 </div>
                 <div className="act-price-cart">${val.actual_price}</div>
@@ -77,7 +63,7 @@ const Cart = ({ cartItem, setCartItem }) => {
                 <div>
                   <MdClose
                     className="cancel-button"
-                    onClick={() => onCancelClick(index)}
+                    onClick={() => props.cancelItem(index)}
                   ></MdClose>
                 </div>
               </div>
@@ -118,7 +104,7 @@ const Cart = ({ cartItem, setCartItem }) => {
             <button
               type="button"
               className="clear-cart"
-              onClick={onClearCartClick}
+              onClick={() => props.clearCart()}
             >
               CLEAR CART
             </button>
@@ -137,5 +123,13 @@ const Cart = ({ cartItem, setCartItem }) => {
     </div>
   );
 };
+const mapStateToProps = (state) => {
+  return { items: state.items };
+};
 
-export default Cart;
+export default connect(mapStateToProps, {
+  minusQuant,
+  plusQuant,
+  cancelItem,
+  clearCart,
+})(Cart);
