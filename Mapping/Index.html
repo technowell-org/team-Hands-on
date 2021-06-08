@@ -10,9 +10,7 @@
       height: 100%;
       width: 100%;
     }
-    #viewDiv1{
-        color:red;
-    }
+    
   </style>
    <link rel="stylesheet" href="https://js.arcgis.com/4.19/esri/themes/light/main.css" />
    <script src="https://js.arcgis.com/4.19/"></script>
@@ -33,10 +31,7 @@ const view = new MapView({
 <script>
 
   const trailheadsLayer = new FeatureLayer({
-      container:"",
-      map:point,
-      center: [-118.80543,34.02700],
-    zoom: 13,
+
 
     url: "https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Trailheads_Styled/FeatureServer/0"
    });
@@ -59,6 +54,5 @@ map.add(trailsLayer, 1);
   </head>
   <body>
 <div id="viewDiv"></div>
-<div id="viewDiv1"></div>
   </body>
   </html>
