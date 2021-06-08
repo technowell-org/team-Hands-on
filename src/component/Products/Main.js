@@ -4,7 +4,7 @@ import { ItemsData } from "./ItemsData";
 import { FaGripHorizontal, FaListUl } from "react-icons/fa";
 
 import { useHistory } from "react-router-dom";
-
+import Heading from "../Heading";
 
 const Main = ({ cartItem, setCartItem }) => {
   var des_price = [];
@@ -123,7 +123,7 @@ const Main = ({ cartItem, setCartItem }) => {
 
   return (
     <div className="products">
-      
+      <Heading current="Products" titles={titles}></Heading>
       <div className="top-h-p">
         <label htmlFor="sort">Sort by:</label>
 
