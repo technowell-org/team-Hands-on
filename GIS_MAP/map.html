@@ -1,0 +1,103 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>ArcGIS Developer Guide: Display a map (2D)</title>
+  <style>
+    html,
+    body,
+    #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+      color:red;
+    }
+  </style>
+
+  <link rel="stylesheet" href="https://js.arcgis.com/4.19//esri/themes/light/main.css">
+  <script src="https://js.arcgis.com/4.19//"></script>
+
+  <script>
+   require([
+    "esri/config",
+    "esri/Map",
+    "esri/views/MapView",
+
+    "esri/layers/FeatureLayer"
+
+  ], function(esriConfig,Map, MapView, FeatureLayer) {
+
+
+        esriConfig.apiKey = "AAPK15e4af1537834ec0a7313251d4c90db4QmFboIzyGyXP81BLYgyR1dfIEPkqxZrt0TnZ3o8aV-XJPBZzPLZfd-YHVPNuPxry";
+      const map = new Map({
+        basemap:  "arcgis-topographic"// Basemap layer
+      });
+
+      const view = new MapView({
+        map: map,
+        center: [-118.805, 34.027],
+        zoom: 13, // scale: 72223.819286
+        container: "viewDiv",
+        extent: {
+            // autocasts as new Extent()
+            xmin: -9177811,
+            ymin: 4247000,
+            xmax: -9176791,
+            ymax: 4247784,
+            spatialReference: 102100
+          }
+        // constraints: {
+        //   snapToZoom: false
+        // }
+      });
+      var featureLayer = new FeatureLayer({
+          url: "https://services.arcgis.com/V6ZHFr6zdgNZuVG0/arcgis/rest/services/Landscape_Trees/FeatureServer/0"
+        });
+
+        const trailheadsLayer = new FeatureLayer({
+    url: "https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Trailheads_Styled/FeatureServer/0"
+  });
+
+  const trailsLayer = new FeatureLayer({
+    url: "https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Trails_Styled/FeatureServer/0"
+  });
+
+
+  const parksLayer = new FeatureLayer({
+    url: "https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Parks_and_Open_Space_Styled/FeatureServer/0"
+  });
+
+  map.add(parksLayer, 0);
+
+  map.add(trailsLayer, 0);
+
+  map.add(trailheadsLayer);
+
+        map.add(featureLayer);
+      });
+
+
+    
+
+
+
+      
+
+  
+
+ 
+
+
+
+
+  </script>
+</head>
+
+<body>
+  <div id="viewDiv"></div>
+</body>
+
+</html>
+
