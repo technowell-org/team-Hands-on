@@ -1,5 +1,4 @@
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -32,13 +31,14 @@
 
         esriConfig.apiKey = "AAPK15e4af1537834ec0a7313251d4c90db4QmFboIzyGyXP81BLYgyR1dfIEPkqxZrt0TnZ3o8aV-XJPBZzPLZfd-YHVPNuPxry";
       const map = new Map({
-        basemap:  "arcgis-topographic"// Basemap layer
+        basemap:  "arcgis-topographic",// Basemap 
+        
       });
 
       const view = new MapView({
         map: map,
-        center: [-118.805, 34.027],
-        zoom: 13, // scale: 72223.819286
+        center: [-118.805, 44.027],
+        zoom: 40, // scale: 72223.819286
         container: "viewDiv",
         extent: {
             // autocasts as new Extent()
@@ -52,9 +52,8 @@
         //   snapToZoom: false
         // }
       });
-      var featureLayer = new FeatureLayer({
-          url: "https://services.arcgis.com/V6ZHFr6zdgNZuVG0/arcgis/rest/services/Landscape_Trees/FeatureServer/0"
-        });
+     
+      
 
         const trailheadsLayer = new FeatureLayer({
     url: "https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Trailheads_Styled/FeatureServer/0"
@@ -75,7 +74,6 @@
 
   map.add(trailheadsLayer);
 
-        map.add(featureLayer);
       });
 
 
