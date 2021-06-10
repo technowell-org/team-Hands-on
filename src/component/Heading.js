@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { BsCaretRightFill } from "react-icons/bs";
 
+
 const Heading = ({ titles, current }) => {
   const renderTitles = titles.map((title) => {
     return (
@@ -10,6 +11,7 @@ const Heading = ({ titles, current }) => {
         <li className="title-list">
           <Link to={title.path} className="links">
             <BsCaretRightFill></BsCaretRightFill>
+          
             {title.name}
           </Link>
         </li>

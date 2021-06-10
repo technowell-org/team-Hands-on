@@ -96,9 +96,7 @@ const Cart = ({ cartItem, setCartItem }) => {
       );
     });
   } else {
-    // renderItemsInCart = (
-    //   <div className="no-items">There are no items in your cart..</div>
-    // );
+    
   }
   
   let titles = [
@@ -150,3 +148,4 @@ const Cart = ({ cartItem, setCartItem }) => {
 };
 
 export default Cart;
+

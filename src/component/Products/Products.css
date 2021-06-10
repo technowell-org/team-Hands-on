@@ -1,4 +1,214 @@
-.renderedItems {
+/* .renderedItems {
+    margin: 25px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 250px;
+    border-radius: 10px;
+  }
+  .renderedItems:hover {
+    border: 1px solid rgb(175, 167, 167);
+    border-radius: 10px;
+  }
+  .renderedItems img {
+    width: 100%;
+    height: 150px;
+    cursor: pointer;
+  }
+  .title-prod {
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .description {
+    padding: 15px;
+    text-align: center;
+    color: rgb(80, 79, 79);
+  }
+  .renderedItems button {
+    border-radius: 20px;
+    transition-duration: 0.4s;
+    padding: 12px 28px;
+    border: 2px solid #4caf50;
+    color: green;
+    background-color: white;
+    font-size: 10px;
+    margin-top: 10px;
+  }
+  .renderedItems button:hover {
+    border-radius: 20px;
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 28px;
+    border: 2px solid #4caf50;
+    font-size: 10px;
+  }
+  #off {
+    float: left;
+    padding: 15px;
+    width: 25%;
+    height: 20px;
+    color: red;
+  }
+  #rating {
+    float: right;
+    padding: 15px;
+    width: 25%;
+    height: 20px;
+    color: red;
+  }
+  #actual_price {
+    color: rgb(194, 181, 181);
+    text-decoration: line-through;
+  }
+  #des_price {
+    color: rgb(19, 17, 17);
+  }
+  .top-h-p {
+    margin-top: 50px;
+  }
+  .top-h-p label {
+    margin-left: 50px;
+    float: left;
+    color: rgb(194, 181, 181);
+  }
+  .top-h-p select {
+    float: left;
+    border-radius: 20px;
+    border: 1px solid rgb(194, 181, 181);
+    padding: 10px;
+    margin-top: -10px;
+    margin-left: 5px;
+    color: rgb(73, 68, 68);
+  }
+  .top-h-p div {
+    float: left;
+    margin-left: 10px;
+    color: rgb(194, 181, 181);
+  }
+  .grid-view {
+    float: left;
+    margin-left: 750px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    padding: 10px 24px;
+    background-color: #4caf50;
+    padding: 13px 12px 8px 12px;
+    margin-top: -15px;
+  }
+  .list-view {
+    float: left;
+    margin-left: 15px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    color: rgb(80, 79, 79);
+    font-size: 20px;
+    padding: 10px 24px;
+    background-color: white;
+    padding: 13px 12px 8px 12px;
+    margin-top: -15px;
+  }
+  
+  .renderedItems-LView {
+    margin: 25px;
+  
+    border: 1px solid #ccc;
+    height: 250px;
+    width: 1000px;
+    border-radius: 10px;
+  }
+  .renderedItems-LView:hover {
+    border: 1px solid rgb(175, 167, 167);
+    border-radius: 10px;
+  }
+  .renderedItems-LView img {
+    width: 250px;
+    height: 170px;
+    margin-left: -250px;
+    margin-top: 30px;
+    float: left;
+    cursor: pointer;
+  }
+  .description-LView {
+    padding: 15px;
+    float: left;
+    font-size: 15px;
+    margin-right: 250px;
+  }
+  .text-d-LView {
+    font-size: 20px;
+    margin-top: 30px;
+    color: rgb(80, 79, 79);
+  }
+  .renderedItems-LView button {
+    border-radius: 20px;
+    transition-duration: 0.4s;
+    padding: 12px 28px;
+    border: 2px solid #4caf50;
+    color: green;
+    background-color: white;
+    font-size: 10px;
+    margin-top: 40px;
+  }
+  .renderedItems-LView button:hover {
+    border-radius: 20px;
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 28px;
+    border: 2px solid #4caf50;
+    font-size: 10px;
+  }
+  #off-LView {
+    float: left;
+    padding: 15px;
+    width: 25%;
+    height: 20px;
+    color: red;
+  }
+  #rating-LView {
+    float: right;
+    padding: 15px;
+    width: 20%;
+    height: 20px;
+    color: red;
+    margin-left: 150px;
+    margin-right: -130px;
+  }
+  #actual_price-LView {
+    color: rgb(194, 181, 181);
+    text-decoration: line-through;
+  }
+  #des_price-LView {
+    color: rgb(19, 17, 17);
+  }
+  .items-c-p {
+    margin-top: 130px;
+  }
+  .grid-view-LView {
+    float: left;
+    margin-left: 750px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    color: rgb(80, 79, 79);
+    font-size: 20px;
+    padding: 10px 24px;
+    background-color: white;
+    padding: 13px 12px 8px 12px;
+    margin-top: -15px;
+  }
+  .list-view-LView {
+    float: left;
+    margin-left: 15px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    padding: 10px 24px;
+    background-color: #4caf50;
+    padding: 13px 12px 8px 12px;
+    margin-top: -15px;
+  } */
+  .renderedItems {
     margin: 25px;
     border: 1px solid #ccc;
     float: left;

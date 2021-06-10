@@ -6,6 +6,8 @@ import HomeItems from "./HomeItems";
 const Home = () => {
   return (
     <div className="home">
+     
+     
       <div className="slider-home">
         <ImageSlider slides={SliderData} />
       </div>

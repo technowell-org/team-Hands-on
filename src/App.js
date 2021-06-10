@@ -19,7 +19,7 @@ const App = () => {
           <Switch>
             <Route path="/" exact component={Homee} />
             <Route
-              path="/products"
+              path="/Products"
               exact
               render={(props) => (
                 <Products
@@ -31,7 +31,7 @@ const App = () => {
             />
 
             <Route
-              path="/products/:id"
+              path="/Products/:id"
               exact
               render={(props) => (
                 <Item
